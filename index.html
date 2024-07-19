@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Tables</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Data Tables</h3>
+        {% for title, table in tables.items() %}
+            <h5>{{ title }}</h5>
+            <div>
+                {{ table|safe }}
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+</body>
+</html>
